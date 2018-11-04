@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+service UsersService {
+    rpc getUsers(UserRequest) returns (User) {}
+
+}
+
+message UserRequest {
+    int32 id = 1;
+}
+
+message User {
+    int32 id = 1;
+    string name = 2;
+}
